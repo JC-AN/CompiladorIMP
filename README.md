@@ -15,11 +15,11 @@ Se trabaja en equipos de una a tres personas.
 ```bash
 python -m venv .venv
 ```
-###En Linux:
+##En Linux:
 ```bash
 source .venv/bin/activate
 ```
-###En PowerShell:
+##En PowerShell:
 ```powershell
 .venv\Scripts\Activate.ps1
 ```
@@ -50,7 +50,7 @@ Resultado final de las pruebas:
 Decisión tomada sobre una regla léxica:
 Estimación inicial:
 Tiempo real:
-#Antes de entregar
+#Antes de entregar<br>
 [ ] El repositorio es privado y da acceso al equipo y a `manu-msr`.<br>
 [ ] El equipo tiene como máximo tres integrantes.<br>
 [ ] Las pruebas de IMP y de IMP++ pasan.<br>
