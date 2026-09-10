@@ -46,10 +46,10 @@ Al inicio, las pruebas de IMP deben pasar y las de IMP++ deben aparecer como
 carácter no reconocido.<br>
 ## Registro de trabajo
 <!-- TODO: completa esta sección antes de entregar. -->
-Resultado final de las pruebas:
-Decisión tomada sobre una regla léxica:
-Estimación inicial:
-Tiempo real:
+Resultado final de las pruebas:<br>
+Decisión tomada sobre una regla léxica:<br>
+Estimación inicial:<br>
+Tiempo real:<br>
 # Antes de entregar<br>
 [ ] El repositorio es privado y da acceso al equipo y a `manu-msr`.<br>
 [ ] El equipo tiene como máximo tres integrantes.<br>
