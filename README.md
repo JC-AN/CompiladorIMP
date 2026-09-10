@@ -6,13 +6,7 @@ Se trabaja en equipos de una a tres personas.
 
 ## Equipo y repositorio
 
-<!-- TODO: completa esta sección antes de entregar. -->
-
-- Nombre del equipo:
-- Integrantes y usuarios de GitHub:
-- Enlace al repositorio privado:
+- Nombre del equipo: Axioryx
+- Integrantes y usuarios de GitHub: José Carlos Ascencio - JC-AN
+- Enlace al repositorio privado: https://github.com/JC-AN/CompiladorIMP.git
 - Estado de la invitación a `manu-msr`:
-
-Equipo: Axioryx
-Integrante: José Carlos Ascencio Navarro
-Usuario: JC-AN o Paradox
