@@ -10,6 +10,10 @@ THEN.2: /then(?![A-Za-z0-9_])/
 ELSE.2: /else(?![A-Za-z0-9_])/
 WHILE.2: /while(?![A-Za-z0-9_])/
 DO.2: /do(?![A-Za-z0-9_])/
+INT.2: /int(?![A-Za-z0-9_])/
+BOOL.2: /bool(?![A-Za-z0-9_])/
+PRINT.2: /print(?![A-Za-z0-9_])/
+FOR.2: /for(?![A-Za-z0-9_])/
 
 // Datos de IMP.
 NUM: /[0-9]+/
@@ -29,6 +33,10 @@ SEMI: ";"
 LPAR: "("
 RPAR: ")"
 COMMENT: /\/\/[^\n]*/
+LBRACE: "{"
+RBRACE: "}"
+INC: "++"
+DEC: "--"
 
 // TODO 3: agrega INT, BOOL, PRINT y FOR como palabras reservadas.
 
