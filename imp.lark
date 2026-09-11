@@ -38,10 +38,6 @@ RBRACE: "}"
 INC: "++"
 DEC: "--"
 
-// TODO 3: agrega INT, BOOL, PRINT y FOR como palabras reservadas.
-
-// TODO 4: agrega LBRACE, RBRACE, INC y DEC.
-
 %import common.WS
 %ignore WS
 %ignore COMMENT
