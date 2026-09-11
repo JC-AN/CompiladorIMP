@@ -14,20 +14,17 @@ def tipos_y_lexemas(codigo_fuente: str) -> list[tuple[str, str]]:
 
 
 class PruebasLexerImpMasMas(unittest.TestCase):
-    @unittest.skip("Retira este decorador después de extender LOC")
     def test_identificador_con_guion_bajo(self) -> None:
         self.assertEqual(
             tipos_y_lexemas("contador_1 := 0;"),
             [("LOC", "contador_1"), ("ASSIGN", ":="), ("NUM", "0"), ("SEMI", ";")],
         )
 
-    @unittest.skip("Retira este decorador después de agregar comentarios")
     def test_comentario_se_ignora(self) -> None:
         tokens = tokenizar("X := 1; // avance\nY := 2;")
         self.assertEqual([str(token) for token in tokens], ["X", ":=", "1", ";", "Y", ":=", "2", ";"])
         self.assertEqual((tokens[4].type, tokens[4].line, tokens[4].column), ("LOC", 2, 1))
 
-    @unittest.skip("Retira este decorador después de agregar palabras y llaves")
     def test_palabras_reservadas_y_llaves(self) -> None:
         self.assertEqual(
             tipos_y_lexemas("int bool print for { } printable"),
@@ -42,7 +39,6 @@ class PruebasLexerImpMasMas(unittest.TestCase):
             ],
         )
 
-    @unittest.skip("Retira este decorador después de agregar INC y DEC")
     def test_incremento_y_decremento_son_tokens_completos(self) -> None:
         self.assertEqual(
             tipos_y_lexemas("X++ + Y-- - 1"),
@@ -57,7 +53,6 @@ class PruebasLexerImpMasMas(unittest.TestCase):
             ],
         )
 
-    @unittest.skip("Retira este decorador cuando la extensión esté completa")
     def test_programa_imp_mas_mas(self) -> None:
         codigo = """int contador_1 := 0;
 bool activo := true;
@@ -77,9 +72,24 @@ for (contador_1 := 0; contador_1 <= 2; contador_1++) {
             ],
         )
 
-    # TODO: agrega un caso válido propio y un caso que espere
-    # UnexpectedCharacters, como se solicita en el Ejercicio 4.
-
+    def test_caso_valido(self) -> None:
+        self.assertEqual(
+            tipos_y_lexemas("Z_ :=++ +while for for21--1"),
+            [
+                ("LOC", "Z_"),
+                ("ASSIGN", ":="),
+                ("INC", "++"),
+                ("PLUS", "+"),
+                ("WHILE", "while"),
+                ("FOR", "for"),
+                ("LOC", "for21"),
+                ("DEC", "--"),
+                ("NUM", "1"),
+            ],
+        )
+    def test_UnexpectedCharacters(self) -> None:
+        with self.assertRaises(UnexpectedCharacters):
+            tokenizar("## //Caracteres NO Validos")
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
