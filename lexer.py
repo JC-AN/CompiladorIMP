@@ -19,7 +19,7 @@ def construir_lexer() -> Lark:
     return Lark(
         gramatica,
         parser=None,
-        lexer="standard",
+        lexer="basic",
         propagate_positions=True,
     )
 
