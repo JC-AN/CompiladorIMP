@@ -25,7 +25,6 @@ class PruebasLexerImpMasMas(unittest.TestCase):
         self.assertEqual([str(token) for token in tokens], ["X", ":=", "1", ";", "Y", ":=", "2", ";"])
         self.assertEqual((tokens[4].type, tokens[4].line, tokens[4].column), ("LOC", 2, 1))
 
-    @unittest.skip("Retira este decorador después de agregar palabras y llaves")
     def test_palabras_reservadas_y_llaves(self) -> None:
         self.assertEqual(
             tipos_y_lexemas("int bool print for { } printable"),
@@ -40,7 +39,6 @@ class PruebasLexerImpMasMas(unittest.TestCase):
             ],
         )
 
-    @unittest.skip("Retira este decorador después de agregar INC y DEC")
     def test_incremento_y_decremento_son_tokens_completos(self) -> None:
         self.assertEqual(
             tipos_y_lexemas("X++ + Y-- - 1"),
@@ -55,7 +53,6 @@ class PruebasLexerImpMasMas(unittest.TestCase):
             ],
         )
 
-    @unittest.skip("Retira este decorador cuando la extensión esté completa")
     def test_programa_imp_mas_mas(self) -> None:
         codigo = """int contador_1 := 0;
 bool activo := true;
