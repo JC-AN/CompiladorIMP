@@ -9,7 +9,7 @@ Se trabaja en equipos de una a tres personas.
 - Nombre del equipo: Axioryx
 - Integrantes y usuarios de GitHub: José Carlos Ascencio - JC-AN
 - Enlace al repositorio privado: https://github.com/JC-AN/CompiladorIMP.git
-- Estado de la invitación a `manu-msr`:
+- Estado de la invitación a `lirc2911`: En espera de aceptación.
 
 ## Preparación
 ```bash
@@ -46,14 +46,14 @@ Al inicio, las pruebas de IMP deben pasar y las de IMP++ deben aparecer como
 carácter no reconocido.<br>
 ## Registro de trabajo
 <!-- TODO: completa esta sección antes de entregar. -->
-Resultado final de las pruebas:<br>
-Decisión tomada sobre una regla léxica:<br>
-Estimación inicial:<br>
-Tiempo real:<br>
+Resultado final de las pruebas: Todas fueron exitosas.<br>
+Decisión tomada sobre una regla léxica: Ninguna en realidad, seguí las instrucciones<br>
+Estimación inicial: 1hr<br>
+Tiempo real: 9hrs<br>
 # Antes de entregar<br>
-[ ] El repositorio es privado y da acceso al equipo y a `manu-msr`.<br>
-[ ] El equipo tiene como máximo tres integrantes.<br>
-[ ] Las pruebas de IMP y de IMP++ pasan.<br>
-[ ] No queda ningún `@unittest.skip` ni `TODO`.<br>
-[ ] Se agregó un caso válido y uno con error léxico.<br>
-[ ] `requirements.txt` conserva la versión de Lark.<br>
+[✅] El repositorio es privado y da acceso al equipo y a `lirc2911`.<br>
+[✅] El equipo tiene como máximo tres integrantes.<br>
+[✅] Las pruebas de IMP y de IMP++ pasan.<br>
+[✅] No queda ningún `@unittest.skip` ni `TODO`.<br>
+[✅] Se agregó un caso válido y uno con error léxico.<br>
+[✅] `requirements.txt` conserva la versión de Lark.<br>
