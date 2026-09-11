@@ -14,14 +14,12 @@ def tipos_y_lexemas(codigo_fuente: str) -> list[tuple[str, str]]:
 
 
 class PruebasLexerImpMasMas(unittest.TestCase):
-    @unittest.skip("Retira este decorador después de extender LOC")
     def test_identificador_con_guion_bajo(self) -> None:
         self.assertEqual(
             tipos_y_lexemas("contador_1 := 0;"),
             [("LOC", "contador_1"), ("ASSIGN", ":="), ("NUM", "0"), ("SEMI", ";")],
         )
 
-    @unittest.skip("Retira este decorador después de agregar comentarios")
     def test_comentario_se_ignora(self) -> None:
         tokens = tokenizar("X := 1; // avance\nY := 2;")
         self.assertEqual([str(token) for token in tokens], ["X", ":=", "1", ";", "Y", ":=", "2", ";"])

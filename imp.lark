@@ -2,18 +2,18 @@
 // Conserva los nombres de token: serán la interfaz con el parser.
 
 // Palabras reservadas de IMP. La prioridad evita que se clasifiquen como LOC.
-TRUE.2: /true(?![A-Za-z0-9])/
-FALSE.2: /false(?![A-Za-z0-9])/
-SKIP.2: /skip(?![A-Za-z0-9])/
-IF.2: /if(?![A-Za-z0-9])/
-THEN.2: /then(?![A-Za-z0-9])/
-ELSE.2: /else(?![A-Za-z0-9])/
-WHILE.2: /while(?![A-Za-z0-9])/
-DO.2: /do(?![A-Za-z0-9])/
+TRUE.2: /true(?![A-Za-z0-9_])/
+FALSE.2: /false(?![A-Za-z0-9_])/
+SKIP.2: /skip(?![A-Za-z0-9_])/
+IF.2: /if(?![A-Za-z0-9_])/
+THEN.2: /then(?![A-Za-z0-9_])/
+ELSE.2: /else(?![A-Za-z0-9_])/
+WHILE.2: /while(?![A-Za-z0-9_])/
+DO.2: /do(?![A-Za-z0-9_])/
 
 // Datos de IMP.
 NUM: /[0-9]+/
-LOC: /[A-Za-z]+[0-9]*/
+LOC: /[A-Za-z][A-Za-z0-9_]*/
 
 // Operadores y delimitadores de IMP.
 ASSIGN: ":="
@@ -28,11 +28,7 @@ NOT: "!"
 SEMI: ";"
 LPAR: "("
 RPAR: ")"
-
-// TODO 1: amplía LOC para admitir letras, dígitos y guion bajo después
-// de la primera letra. Ajusta también el límite de las palabras reservadas.
-
-// TODO 2: agrega COMMENT para // hasta el fin de la línea e ignóralo.
+COMMENT: /\/\/[^\n]*/
 
 // TODO 3: agrega INT, BOOL, PRINT y FOR como palabras reservadas.
 
@@ -40,3 +36,4 @@ RPAR: ")"
 
 %import common.WS
 %ignore WS
+%ignore COMMENT
