@@ -72,9 +72,24 @@ for (contador_1 := 0; contador_1 <= 2; contador_1++) {
             ],
         )
 
-    # TODO: agrega un caso válido propio y un caso que espere
-    # UnexpectedCharacters, como se solicita en el Ejercicio 4.
-
+    def test_caso_valido(self) -> None:
+        self.assertEqual(
+            tipos_y_lexemas("Z_ :=++ +while for for21--1"),
+            [
+                ("LOC", "Z_"),
+                ("ASSIGN", ":="),
+                ("INC", "++"),
+                ("PLUS", "+"),
+                ("WHILE", "while"),
+                ("FOR", "for"),
+                ("LOC", "for21"),
+                ("DEC", "--"),
+                ("NUM", "1"),
+            ],
+        )
+    def test_UnexpectedCharacters(self) -> None:
+        with self.assertRaises(UnexpectedCharacters):
+            tokenizar("## //Caracteres NO Validos")
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
